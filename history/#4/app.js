@@ -2,13 +2,17 @@ const loginForm = document.querySelector(".login-form");
 const loginInput = loginForm.querySelector("input");
 const loginButton = loginForm.querySelector("button");
 
-function btnClick() {
+const link = document.querySelector("a");
+
+function onLoginSubmit(event) {
   const userName = loginInput.value;
+
+  event.preventDefault();
   console.log(userName);
-  if (userName === "") {
-    alert("write your name");
-  } else if (userName.length > 15) {
-    alert("your name is too long");
-  }
 }
-loginButton.addEventListener("click", btnClick);
+function handleLink(event) {
+  event.preventDefault();
+  console.log(event);
+}
+loginForm.addEventListener("submit", onLoginSubmit);
+link.addEventListener("click", handleLink);
