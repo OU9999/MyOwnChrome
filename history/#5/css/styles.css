@@ -1,3 +1,199 @@
+@import "reset.css";
 .hidden {
   display: none;
+}
+
+@keyframes slide-fwd-center {
+  0% {
+    transform: translateZ(0);
+  }
+  100% {
+    transform: translateZ(160px);
+  }
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.background {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+}
+
+.clock {
+  font-size: 175px;
+  color: whitesmoke;
+  text-shadow: 10px 10px 10px gray;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 30px;
+}
+
+.clock:hover {
+  color: black;
+  text-shadow: 10px 10px 10px white;
+}
+
+.name-ask {
+  font-size: 100px;
+  color: whitesmoke;
+  text-shadow: 10px 10px 10px gray;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 50px;
+}
+
+.name-ask:hover {
+  color: black;
+  text-shadow: 10px 10px 10px white;
+}
+
+.login-form {
+}
+
+.login-form input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+  font-size: 100px;
+  width: 600px;
+  border-radius: 25px;
+}
+
+.login-form input::placeholder {
+  font-size: 65px;
+  top: 20px;
+  left: 60px;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  color: white;
+  text-shadow: 10px 10px 10px gray;
+}
+.login-form input:hover::placeholder {
+  color: rgba(0, 0, 0, 0);
+  text-shadow: none;
+}
+.login-form input:focus {
+  outline: none;
+}
+
+.greeting {
+  font-size: 100px;
+  color: whitesmoke;
+  text-shadow: 10px 10px 10px gray;
+  transition: all 0.3s ease-in-out;
+  margin-bottom: 30px;
+}
+
+.greeting:hover {
+  color: black;
+  text-shadow: 10px 10px 10px white;
+}
+
+.todo-form {
+  transition: all 0.3s ease-in-out;
+}
+
+.todo-form input {
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 100px;
+  width: 700px;
+  text-shadow: 10px 10px 10px gray;
+  transition: all 0.3s ease-in-out;
+  border-radius: 25px;
+  margin-bottom: 30px;
+}
+
+.todo-form input::placeholder {
+  transition: all 0.3s ease-in-out;
+  color: white;
+}
+.todo-form input:hover::placeholder {
+  color: rgba(0, 0, 0, 0);
+  text-shadow: none;
+}
+.todo-form input:focus {
+  outline: none;
+}
+
+.todo-list {
+  background: rgba(0, 0, 0, 0.5);
+  width: 1000px;
+  height: 250px;
+  overflow-x: scroll;
+  overflow-y: scroll;
+  border-radius: 25px;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+.todo-list li {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 50px;
+  color: white;
+  text-shadow: 10px 10px 10px gray;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 25px;
+}
+.todo-list li:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.todo-list li button {
+  background: none;
+  border: none;
+}
+
+.quote {
+  position: absolute;
+  bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.quote span {
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+.quote span:first-child {
+  margin-bottom: 5px;
+}
+
+.weather {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.weather span {
+  color: white;
 }
